@@ -1,10 +1,16 @@
 import sqlite3
-import sqlalchemy
 import pandas as pd
 
 
 # Global database variable
-
+foods = ['FMID', 'Bakedgoods', 'Cheese', 'Crafts',
+         'Flowers', 'Eggs', 'Seafood', 'Herbs',
+         'Vegetables', 'Honey', 'Jams', 'Maple',
+         'Meat', 'Nursery', 'Nuts', 'Plants',
+         'Poultry', 'Prepared', 'Soap', 'Trees',
+         'Wine', 'Coffee', 'Beans', 'Fruits',
+         'Grains', 'Juices', 'Mushrooms', 'PetFood',
+         'Tofu', 'WildHarvested']
 
 social_media = ['Website', 'Facebook', 'TwitterHandle',
                 'Youtube', 'Instagram', 'OtherMedia']
@@ -28,7 +34,7 @@ print(payment_map)
 
 class Database():
     '''
-    Creates the database and runs appropriate 
+    Creates the database and runs appropriate
     functions and implements update functionality
     '''
 
@@ -40,12 +46,123 @@ class Database():
         self.c = self.conn.cursor()
 
     def clean_up(self):
+        '''
+        Commit the changes and close the connection to the database
+        '''
         print("Cleaning Up")
         self.conn.commit()
         self.conn.close()
 
+    def insert_MarketName(self, dataframe):
+        '''
+        Functon to create the selection from the dataframe
+        and insert the the rows into the MarketName table
+        Args: Dataframe that will be input into the Db
+        Returns: Nothing
+        '''
+        sql = ''' INSERT INTO MarketName(FMID,MarketName,updateTime)
+            VALUES(?,?,?) '''
+
+        market_tuples = dataframe[['FMID', 'MarketName', 'updateTime']]
+        market_tuples = [tuple(x) for x in market_tuples.values]
+        for row in market_tuples:
+            self.c.execute(sql, row)
+
+    def insert_SocialMedia(self, dataframe):
+        '''
+        Functon to create the selection from the dataframe
+        and insert the the rows into the Social media table
+        Args: Dataframe that will be input into the Db
+        Returns
+        '''
+        sql = ''' INSERT INTO SocialMedia(FMID,SMID,value)
+            VALUES(?,?,?) '''
+
+        social_media_tuples = None
+        for column in social_media:
+            temp = dataframe[['FMID', column]]
+            temp = temp[temp[column].notnull()]
+            temp.insert(1, 'SMID', social_media_map[column])
+            temp = [tuple(x) for x in temp.values]
+            if social_media_tuples is None:
+                social_media_tuples = temp
+            else:
+                social_media_tuples.extend(temp)
+        for row in social_media_tuples:
+            self.c.execute(sql, row)
+
+    def insert_Time(self, dataframe):
+        '''
+        Functon to create the selection from the dataframe
+        and insert the the rows into the Time table
+        Args: Dataframe that will be input into the Db
+        Returns
+        '''
+        sql = ''' INSERT INTO Time(FMID,TID,value)
+            VALUES(?,?,?) '''
+
+        time_tuples = None
+        for column in timeing:
+            temp = dataframe[['FMID', column]]
+            temp = temp[temp[column].notnull()]
+            temp.insert(1, 'TID', timing_map[column])
+            temp = [tuple(x) for x in temp.values]
+            if time_tuples is None:
+                time_tuples = temp
+            else:
+                time_tuples.extend(temp)
+        for row in time_tuples:
+            self.c.execute(sql, row)
+
+    def insert_Foods(self, dataframe):
+        sql = ''' INSERT INTO Foods(FMID , Bakedgoods , Cheese , Crafts ,
+            Flowers , Eggs ,Seafood , Herbs ,
+            Vegetables , Honey , Jams , Maple ,
+            Meat , Nursery , Nuts ,Plants ,
+            Poultry , Prepared , Soap , Trees ,
+            Wine , Coffee ,Beans , Fruits ,
+            Grains , Juices , Mushrooms , PetFood ,
+            Tofu ,WildHarvested )
+            VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) '''
+
+        food_tuples = dataframe[foods]
+        food_tuples = [tuple(x) for x in food_tuples.values]
+        for row in food_tuples:
+            self.c.execute(sql, row)
+
+    def insert_Location(self, dataframe):
+        sql = ''' INSERT INTO Location(FMID, x, y, street, city,
+                         County, StateCode, zip, Location)
+            VALUES(?,?,?,?,?,?,?,?,?) '''
+        location_cols = ['FMID', 'x', 'y', 'street', 'city',
+                         'County', 'StateCode', 'zip', 'Location']
+        location_tuples = dataframe[location_cols]
+        location_tuples = [tuple(x) for x in location_tuples.values]
+        for row in location_tuples:
+            self.c.execute(sql, row)
+
+    def insert_Payment(self, dataframe):
+        sql = ''' INSERT INTO Payment(FMID,PID,value)
+            VALUES(?,?,?) '''
+
+        payment_tuples = None
+        for column in payments:
+            temp = dataframe[['FMID', column]]
+            temp = temp[temp[column].notnull()]
+            temp.insert(1, 'PID', payment_map[column])
+            temp = [tuple(x) for x in temp.values]
+            if payment_tuples is None:
+                payment_tuples = temp
+            else:
+                payment_tuples.extend(temp)
+        for row in payment_tuples:
+            self.c.execute(sql, row)
+
     def create_tables(self):
-            # Create MarketName table
+        '''
+        Create the relevant database tables following the ER schema
+        '''
+        # Create MarketName table
         self.c.execute('''CREATE TABLE IF NOT EXISTS MarketName
             (FMID int, MarketName text, updateTime text)''')
 
@@ -83,5 +200,12 @@ if __name__ == '__main__':
     dataframe = pd.read_csv('data/clean_data.csv')
     db = Database('database/finalproject.db')
     db.create_tables()
-    db.clean_up()
 
+    db.insert_MarketName(dataframe)
+    db.insert_SocialMedia(dataframe)
+    db.insert_Time(dataframe)
+    db.insert_Foods(dataframe)
+    db.insert_Location(dataframe)
+    db.insert_Payment(dataframe)
+
+    db.clean_up()
