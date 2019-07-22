@@ -1,0 +1,6063 @@
+[
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "OtherMedia",
+    "expression": "grel:if(value.find(/instagram/).length()>0, value,[])",
+    "onError": "set-to-blank",
+    "newColumnName": "Instagram",
+    "columnInsertIndex": 8,
+    "description": "Create column Instagram at index 8 based on column OtherMedia using expression grel:if(value.find(/instagram/).length()>0, value,[])"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Season1Time",
+    "expression": "value.toDate()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Season1Time using expression value.toDate()"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "TwitterHandle",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "n/a",
+          "NA",
+          "N/A"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": ""
+      },
+      {
+        "from": [
+          "HeirloomFM",
+          "heirloomfm"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "HeirloomFM"
+      },
+      {
+        "from": [
+          "PkskllFarmMkt",
+          "pkskllfarmmkt"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "PkskllFarmMkt"
+      },
+      {
+        "from": [
+          "FoodInRoot",
+          "foodinroot"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "FoodInRoot"
+      },
+      {
+        "from": [
+          "BosPublicMarket",
+          "bospublicmarket"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "BosPublicMarket"
+      },
+      {
+        "from": [
+          "none",
+          "None"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "none"
+      },
+      {
+        "from": [
+          ""
+        ],
+        "fromBlank": true,
+        "fromError": false,
+        "to": ""
+      },
+      {
+        "from": [
+          "WaterfrontMktGH"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "WaterfrontMktGH"
+      },
+      {
+        "from": [
+          "missionksmarket"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "missionksmarket"
+      },
+      {
+        "from": [
+          "wcgrowersmarket"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "wcgrowersmarket"
+      },
+      {
+        "from": [
+          "SFClocal"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "SFClocal"
+      },
+      {
+        "from": [
+          "poolerfarmersmkt"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "poolerfarmersmkt"
+      },
+      {
+        "from": [
+          "OXCityMarket"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "OXCityMarket"
+      },
+      {
+        "from": [
+          "memphisbotanic"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "memphisbotanic"
+      },
+      {
+        "from": [
+          "LomiraMarket"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "LomiraMarket"
+      },
+      {
+        "from": [
+          "MDCXRoadsMarket"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "MDCXRoadsMarket"
+      },
+      {
+        "from": [
+          "foodworksrir"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "foodworksrir"
+      },
+      {
+        "from": [
+          "SouthernVillage"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "SouthernVillage"
+      },
+      {
+        "from": [
+          "twitter.com/inglewoodfarm"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "twitter.com/inglewoodfarm"
+      },
+      {
+        "from": [
+          "RCRGLI"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "RCRGLI"
+      },
+      {
+        "from": [
+          "codmansqmarket"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "codmansqmarket"
+      },
+      {
+        "from": [
+          "TFMMueller"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "TFMMueller"
+      },
+      {
+        "from": [
+          "mosfarmersmkt"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "mosfarmersmkt"
+      },
+      {
+        "from": [
+          "SproutUrbanFarm"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "SproutUrbanFarm"
+      },
+      {
+        "from": [
+          "SBFarmersMkt_"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "SBFarmersMkt_"
+      },
+      {
+        "from": [
+          "twitter.com/PacCoastFarmers"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "twitter.com/PacCoastFarmers"
+      },
+      {
+        "from": [
+          "SLCFarmersMrkt"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "SLCFarmersMrkt"
+      },
+      {
+        "from": [
+          "AthFarmersMkt"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "AthFarmersMkt"
+      },
+      {
+        "from": [
+          "SitkaLocalFoods"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "SitkaLocalFoods"
+      },
+      {
+        "from": [
+          "asufarmersmarket"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "asufarmersmarket"
+      },
+      {
+        "from": [
+          "chapaqquafarmersmarket"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "chapaqquafarmersmarket"
+      },
+      {
+        "from": [
+          "twitter.com/farmersmarketnv"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "twitter.com/farmersmarketnv"
+      },
+      {
+        "from": [
+          "LEFarmersMarket"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "LEFarmersMarket"
+      },
+      {
+        "from": [
+          "wefm_"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "wefm_"
+      },
+      {
+        "from": [
+          "Mr49053"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Mr49053"
+      },
+      {
+        "from": [
+          "northparkmarket"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "northparkmarket"
+      },
+      {
+        "from": [
+          "southstmarket"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "southstmarket"
+      },
+      {
+        "from": [
+          "FRESHFARMSlvrSp"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "FRESHFARMSlvrSp"
+      },
+      {
+        "from": [
+          "CapeRiverMarket"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "CapeRiverMarket"
+      },
+      {
+        "from": [
+          "PetoskeyChamber"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "PetoskeyChamber"
+      },
+      {
+        "from": [
+          "fcfarmersmkt"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "fcfarmersmkt"
+      },
+      {
+        "from": [
+          "FRESHFARMHStNE"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "FRESHFARMHStNE"
+      },
+      {
+        "from": [
+          "twitter.com/GrassrootsEnvEd"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "twitter.com/GrassrootsEnvEd"
+      },
+      {
+        "from": [
+          "DamaFarmerMkt"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "DamaFarmerMkt"
+      },
+      {
+        "from": [
+          "DOLDC"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "DOLDC"
+      },
+      {
+        "from": [
+          "PalafoxMarket"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "PalafoxMarket"
+      },
+      {
+        "from": [
+          "fayfarmmarket"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "fayfarmmarket"
+      },
+      {
+        "from": [
+          "twitter.com/pickfarmers"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "twitter.com/pickfarmers"
+      },
+      {
+        "from": [
+          "HuntingdonFM"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "HuntingdonFM"
+      },
+      {
+        "from": [
+          "Vailfarmersmkt"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Vailfarmersmkt"
+      },
+      {
+        "from": [
+          "BellevueFarmMkt"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "BellevueFarmMkt"
+      },
+      {
+        "from": [
+          "MarketNewburgh"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "MarketNewburgh"
+      },
+      {
+        "from": [
+          "boonestmarket"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "boonestmarket"
+      },
+      {
+        "from": [
+          "SiouxEmpire"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "SiouxEmpire"
+      },
+      {
+        "from": [
+          "wwfarmersmarket"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "wwfarmersmarket"
+      },
+      {
+        "from": [
+          "BereaFarmMarket"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "BereaFarmMarket"
+      },
+      {
+        "from": [
+          "HobokenFarmer"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "HobokenFarmer"
+      },
+      {
+        "from": [
+          "Twitter.com/newvillagesd"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Twitter.com/newvillagesd"
+      },
+      {
+        "from": [
+          "K3FarmersMarket"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "K3FarmersMarket"
+      },
+      {
+        "from": [
+          "AdaFarmersMkt"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "AdaFarmersMkt"
+      },
+      {
+        "from": [
+          "fresh52dotcom"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "fresh52dotcom"
+      },
+      {
+        "from": [
+          "21acres"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "21acres"
+      },
+      {
+        "from": [
+          "transformsunny"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "transformsunny"
+      },
+      {
+        "from": [
+          "clevelandflea"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "clevelandflea"
+      },
+      {
+        "from": [
+          "yardleyfarmmart"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "yardleyfarmmart"
+      },
+      {
+        "from": [
+          "NWIlansing"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "NWIlansing"
+      },
+      {
+        "from": [
+          "HillsdaleFM"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "HillsdaleFM"
+      },
+      {
+        "from": [
+          "http://twitter.com/prescottfarmers"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "http://twitter.com/prescottfarmers"
+      },
+      {
+        "from": [
+          "EastsideFarmMkt"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "EastsideFarmMkt"
+      },
+      {
+        "from": [
+          "BeaverdaleFarm"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "BeaverdaleFarm"
+      },
+      {
+        "from": [
+          "www.twitter.com/LSFarmersMarket"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "www.twitter.com/LSFarmersMarket"
+      },
+      {
+        "from": [
+          "PghPubMarket"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "PghPubMarket"
+      },
+      {
+        "from": [
+          "CapHarvestDC"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "CapHarvestDC"
+      },
+      {
+        "from": [
+          "KSGrownMarket"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "KSGrownMarket"
+      },
+      {
+        "from": [
+          "mcfarmersmkt"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "mcfarmersmkt"
+      },
+      {
+        "from": [
+          "CitySeedNH"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "CitySeedNH"
+      },
+      {
+        "from": [
+          "RaleighEatLocal"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "RaleighEatLocal"
+      },
+      {
+        "from": [
+          "DFMPublicSquare"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "DFMPublicSquare"
+      },
+      {
+        "from": [
+          "twitter.com/faithinplace"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "twitter.com/faithinplace"
+      },
+      {
+        "from": [
+          "T90Market"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "T90Market"
+      },
+      {
+        "from": [
+          "FMatETSU"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "FMatETSU"
+      },
+      {
+        "from": [
+          "LoneStar_Market"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "LoneStar_Market"
+      },
+      {
+        "from": [
+          "mscollegetown"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "mscollegetown"
+      },
+      {
+        "from": [
+          "HubCityFM"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "HubCityFM"
+      },
+      {
+        "from": [
+          "OceanBeachCA"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "OceanBeachCA"
+      },
+      {
+        "from": [
+          "peoplesmarket"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "peoplesmarket"
+      },
+      {
+        "from": [
+          "SAFarmersMarket"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "SAFarmersMarket"
+      },
+      {
+        "from": [
+          "ForsythFarmMkt"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "ForsythFarmMkt"
+      },
+      {
+        "from": [
+          "FRESHFARMPennQ"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "FRESHFARMPennQ"
+      },
+      {
+        "from": [
+          "MansonFarmerMkt"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "MansonFarmerMkt"
+      },
+      {
+        "from": [
+          "31mainfarmmarkt"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "31mainfarmmarkt"
+      },
+      {
+        "from": [
+          "bainbridgemkt"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "bainbridgemkt"
+      },
+      {
+        "from": [
+          "belairfm"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "belairfm"
+      },
+      {
+        "from": [
+          "nchfarmmarket"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "nchfarmmarket"
+      },
+      {
+        "from": [
+          "coop_farmer_mkt"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "coop_farmer_mkt"
+      },
+      {
+        "from": [
+          "townoffrederick"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "townoffrederick"
+      },
+      {
+        "from": [
+          "hopeandmain"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "hopeandmain"
+      },
+      {
+        "from": [
+          "https://Twitter.com/FarmersMarket@AtTheFairground"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "https://Twitter.com/FarmersMarket@AtTheFairground"
+      },
+      {
+        "from": [
+          "WFMManager"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "WFMManager"
+      },
+      {
+        "from": [
+          "leapforlocal"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "leapforlocal"
+      },
+      {
+        "from": [
+          "https://Twitter.com/MenoFarmMarket"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "https://Twitter.com/MenoFarmMarket"
+      },
+      {
+        "from": [
+          "PainesvilleFM"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "PainesvilleFM"
+      },
+      {
+        "from": [
+          "tclocalfood"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "tclocalfood"
+      },
+      {
+        "from": [
+          "StreatorMarket"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "StreatorMarket"
+      },
+      {
+        "from": [
+          "LaCienegaCFM"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "LaCienegaCFM"
+      },
+      {
+        "from": [
+          "MountHopeMarket"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "MountHopeMarket"
+      },
+      {
+        "from": [
+          "www.twitter.com/goodellgardens"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "www.twitter.com/goodellgardens"
+      },
+      {
+        "from": [
+          "Isabahlia LOEF"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Isabahlia LOEF"
+      },
+      {
+        "from": [
+          "4MRMarket"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "4MRMarket"
+      },
+      {
+        "from": [
+          "BIfarmersmkt"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "BIfarmersmkt"
+      },
+      {
+        "from": [
+          "39North Downtown"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "39North Downtown"
+      },
+      {
+        "from": [
+          "FreshFabublous"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "FreshFabublous"
+      },
+      {
+        "from": [
+          "dallasfarmer"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "dallasfarmer"
+      },
+      {
+        "from": [
+          "Nyack Farmers Market"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Nyack Farmers Market"
+      },
+      {
+        "from": [
+          "eestreetmarket"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "eestreetmarket"
+      },
+      {
+        "from": [
+          "depotparkmarket"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "depotparkmarket"
+      },
+      {
+        "from": [
+          "HCTGM"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "HCTGM"
+      },
+      {
+        "from": [
+          "downtowntc"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "downtowntc"
+      },
+      {
+        "from": [
+          "minnetonkamn"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "minnetonkamn"
+      },
+      {
+        "from": [
+          "SpringfieldFM"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "SpringfieldFM"
+      },
+      {
+        "from": [
+          "winchfarmmkt"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "winchfarmmkt"
+      },
+      {
+        "from": [
+          "WCFM"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "WCFM"
+      },
+      {
+        "from": [
+          "WinnsboroMarket"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "WinnsboroMarket"
+      },
+      {
+        "from": [
+          "AlamoHeightsFM"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "AlamoHeightsFM"
+      },
+      {
+        "from": [
+          "freedomfarmersm"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "freedomfarmersm"
+      },
+      {
+        "from": [
+          "UrbanVillageFM"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "UrbanVillageFM"
+      },
+      {
+        "from": [
+          "BensidounMarket"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "BensidounMarket"
+      },
+      {
+        "from": [
+          "MundeleinMarket"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "MundeleinMarket"
+      },
+      {
+        "from": [
+          "allendalecoc"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "allendalecoc"
+      },
+      {
+        "from": [
+          "Spa City Market"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Spa City Market"
+      },
+      {
+        "from": [
+          "Waimea Midweek Mkt"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Waimea Midweek Mkt"
+      },
+      {
+        "from": [
+          "hburgmarket"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "hburgmarket"
+      },
+      {
+        "from": [
+          "cafarmersmks"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "cafarmersmks"
+      },
+      {
+        "from": [
+          "holyokemarket"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "holyokemarket"
+      },
+      {
+        "from": [
+          "grassrootsFM"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "grassrootsFM"
+      },
+      {
+        "from": [
+          "Forney2ndSat"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Forney2ndSat"
+      },
+      {
+        "from": [
+          "trentondowntown"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "trentondowntown"
+      },
+      {
+        "from": [
+          "twitter.com/overtonparkcfm"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "twitter.com/overtonparkcfm"
+      },
+      {
+        "from": [
+          "wolyfarm"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "wolyfarm"
+      },
+      {
+        "from": [
+          "twitter.com/hilocoffeemill"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "twitter.com/hilocoffeemill"
+      },
+      {
+        "from": [
+          "lanark_market"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "lanark_market"
+      },
+      {
+        "from": [
+          "CollegeStreetAL"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "CollegeStreetAL"
+      },
+      {
+        "from": [
+          "fbcfarmersmarc"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "fbcfarmersmarc"
+      },
+      {
+        "from": [
+          "OnslowCoFarmer"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "OnslowCoFarmer"
+      },
+      {
+        "from": [
+          "JCCIndianapolis"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "JCCIndianapolis"
+      },
+      {
+        "from": [
+          "SanfrdFarmrsMkt"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "SanfrdFarmrsMkt"
+      },
+      {
+        "from": [
+          "ClintonCCNY"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "ClintonCCNY"
+      },
+      {
+        "from": [
+          "PenngtnFarmMkt"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "PenngtnFarmMkt"
+      },
+      {
+        "from": [
+          "CrossroadsNtwk"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "CrossroadsNtwk"
+      },
+      {
+        "from": [
+          "ennisfarmmarket"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "ennisfarmmarket"
+      },
+      {
+        "from": [
+          "BallardFMKT"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "BallardFMKT"
+      },
+      {
+        "from": [
+          "LRFarmersMarket"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "LRFarmersMarket"
+      },
+      {
+        "from": [
+          "growrva"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "growrva"
+      },
+      {
+        "from": [
+          "IndyWFMkt"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "IndyWFMkt"
+      },
+      {
+        "from": [
+          "La_Plaza_Market"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "La_Plaza_Market"
+      },
+      {
+        "from": [
+          "HFMPortland"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "HFMPortland"
+      },
+      {
+        "from": [
+          "joshsfarmmarket"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "joshsfarmmarket"
+      },
+      {
+        "from": [
+          "visitmanassas"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "visitmanassas"
+      },
+      {
+        "from": [
+          "DelcambreMarket"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "DelcambreMarket"
+      },
+      {
+        "from": [
+          "mgfarmersmarket"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "mgfarmersmarket"
+      },
+      {
+        "from": [
+          "purpleporchcoop"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "purpleporchcoop"
+      },
+      {
+        "from": [
+          "woodstockfarmer"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "woodstockfarmer"
+      },
+      {
+        "from": [
+          "thebeachmarkets"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "thebeachmarkets"
+      },
+      {
+        "from": [
+          "dtmarketgr"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "dtmarketgr"
+      },
+      {
+        "from": [
+          "ELFMarket"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "ELFMarket"
+      },
+      {
+        "from": [
+          "CreoleMarket"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "CreoleMarket"
+      },
+      {
+        "from": [
+          "twitter.com/maynardmarket"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "twitter.com/maynardmarket"
+      },
+      {
+        "from": [
+          "TheCityMarketKC"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "TheCityMarketKC"
+      },
+      {
+        "from": [
+          "FRESHFARMCapRiv"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "FRESHFARMCapRiv"
+      },
+      {
+        "from": [
+          "Hardwickmarket"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Hardwickmarket"
+      },
+      {
+        "from": [
+          "MorgantownMkt"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "MorgantownMkt"
+      },
+      {
+        "from": [
+          "SeacoastEatLocl"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "SeacoastEatLocl"
+      },
+      {
+        "from": [
+          "TPFarmersMarket"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "TPFarmersMarket"
+      },
+      {
+        "from": [
+          "WinonaMarket"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "WinonaMarket"
+      },
+      {
+        "from": [
+          "dotcommcoop"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "dotcommcoop"
+      },
+      {
+        "from": [
+          "MtPFarmerMarket"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "MtPFarmerMarket"
+      },
+      {
+        "from": [
+          "carmelfarmmrkt"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "carmelfarmmrkt"
+      },
+      {
+        "from": [
+          "EllingtonFM"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "EllingtonFM"
+      },
+      {
+        "from": [
+          "ClaytonFarmMkt"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "ClaytonFarmMkt"
+      },
+      {
+        "from": [
+          "CFFarmersMkt"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "CFFarmersMkt"
+      },
+      {
+        "from": [
+          "OHSUfarmmarket"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "OHSUfarmmarket"
+      },
+      {
+        "from": [
+          "Sheala_W"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Sheala_W"
+      },
+      {
+        "from": [
+          "Tigardfarmers"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Tigardfarmers"
+      },
+      {
+        "from": [
+          "AshmontFarmMkt"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "AshmontFarmMkt"
+      },
+      {
+        "from": [
+          "BOTBMarket"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "BOTBMarket"
+      },
+      {
+        "from": [
+          "leap4local"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "leap4local"
+      },
+      {
+        "from": [
+          "FarmersKCK"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "FarmersKCK"
+      },
+      {
+        "from": [
+          "BurbFarmMkt"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "BurbFarmMkt"
+      },
+      {
+        "from": [
+          "https://Twitter.com/edmoremarket"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "https://Twitter.com/edmoremarket"
+      },
+      {
+        "from": [
+          "FFM221"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "FFM221"
+      },
+      {
+        "from": [
+          "The Markets at Shrewsbury"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "The Markets at Shrewsbury"
+      },
+      {
+        "from": [
+          "easternmarketdc"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "easternmarketdc"
+      },
+      {
+        "from": [
+          "omahafarmersmkt"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "omahafarmersmkt"
+      },
+      {
+        "from": [
+          "stmikesmarket"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "stmikesmarket"
+      },
+      {
+        "from": [
+          "beaconfarmermkt"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "beaconfarmermkt"
+      },
+      {
+        "from": [
+          "rockwallFM"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "rockwallFM"
+      },
+      {
+        "from": [
+          "MidtownFarmers"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "MidtownFarmers"
+      },
+      {
+        "from": [
+          "MillyGMarket"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "MillyGMarket"
+      },
+      {
+        "from": [
+          "LeelanauFarmMkt"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "LeelanauFarmMkt"
+      },
+      {
+        "from": [
+          "wakefieldfarmmk"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "wakefieldfarmmk"
+      },
+      {
+        "from": [
+          "BevFarmersMkt"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "BevFarmersMkt"
+      },
+      {
+        "from": [
+          "MyHlthyCarolina"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "MyHlthyCarolina"
+      },
+      {
+        "from": [
+          "buckeyeazgov"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "buckeyeazgov"
+      },
+      {
+        "from": [
+          "CromwellFarmersMRKT"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "CromwellFarmersMRKT"
+      },
+      {
+        "from": [
+          "chautauquamall"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "chautauquamall"
+      },
+      {
+        "from": [
+          "http://www.twitter.com/mtownfarmersmkt"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "http://www.twitter.com/mtownfarmersmkt"
+      },
+      {
+        "from": [
+          "DTFarmersMarket"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "DTFarmersMarket"
+      },
+      {
+        "from": [
+          "portlandfarmers?lang=en"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "portlandfarmers?lang=en"
+      },
+      {
+        "from": [
+          "RdgTerminalMkt"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "RdgTerminalMkt"
+      },
+      {
+        "from": [
+          "MidlandFMarket"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "MidlandFMarket"
+      },
+      {
+        "from": [
+          "taylorsfarmers"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "taylorsfarmers"
+      },
+      {
+        "from": [
+          "RchallieRobin"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "RchallieRobin"
+      },
+      {
+        "from": [
+          "DTFairbanksAK"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "DTFairbanksAK"
+      },
+      {
+        "from": [
+          "DelRayFarmMkt"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "DelRayFarmMkt"
+      },
+      {
+        "from": [
+          "CtownFarmersMkt"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "CtownFarmersMkt"
+      },
+      {
+        "from": [
+          "HomegrownJIFM"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "HomegrownJIFM"
+      },
+      {
+        "from": [
+          "pigtown_market"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "pigtown_market"
+      },
+      {
+        "from": [
+          "tricyclegardens"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "tricyclegardens"
+      },
+      {
+        "from": [
+          "PearlFM"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "PearlFM"
+      },
+      {
+        "from": [
+          "seattlefarmmkts"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "seattlefarmmkts"
+      },
+      {
+        "from": [
+          "PhillipsOnlineM"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "PhillipsOnlineM"
+      },
+      {
+        "from": [
+          "LIMercato"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "LIMercato"
+      },
+      {
+        "from": [
+          "JPFarmersMkt"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "JPFarmersMkt"
+      },
+      {
+        "from": [
+          "DelmarFarmerMkt"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "DelmarFarmerMkt"
+      },
+      {
+        "from": [
+          "ETSFarmerMarket"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "ETSFarmerMarket"
+      },
+      {
+        "from": [
+          "enfarmersmkt"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "enfarmersmkt"
+      },
+      {
+        "from": [
+          "Umbrella_Market"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Umbrella_Market"
+      },
+      {
+        "from": [
+          "CTAlcinea"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "CTAlcinea"
+      },
+      {
+        "from": [
+          "OaklandfarmerNJ"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "OaklandfarmerNJ"
+      },
+      {
+        "from": [
+          "FRESHFARMDupont"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "FRESHFARMDupont"
+      },
+      {
+        "from": [
+          "HSFarmersMarket"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "HSFarmersMarket"
+      },
+      {
+        "from": [
+          "westsideroch"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "westsideroch"
+      },
+      {
+        "from": [
+          "millingtonarp"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "millingtonarp"
+      },
+      {
+        "from": [
+          "ValleydaleFM"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "ValleydaleFM"
+      },
+      {
+        "from": [
+          "CentralFarmMKTs"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "CentralFarmMKTs"
+      },
+      {
+        "from": [
+          "PearlRiverMkt"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "PearlRiverMkt"
+      },
+      {
+        "from": [
+          "MidtownFmsMkt"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "MidtownFmsMkt"
+      },
+      {
+        "from": [
+          "marionevents"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "marionevents"
+      },
+      {
+        "from": [
+          "farmersmarket@BishopsCornerWH"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "farmersmarket@BishopsCornerWH"
+      },
+      {
+        "from": [
+          "Vela_ELA?refsrc=email"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Vela_ELA?refsrc=email"
+      },
+      {
+        "from": [
+          "tualatinfarmers"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "tualatinfarmers"
+      },
+      {
+        "from": [
+          "ccfarmersmarket"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "ccfarmersmarket"
+      },
+      {
+        "from": [
+          "downtownGB"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "downtownGB"
+      },
+      {
+        "from": [
+          "burgslocalfoods"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "burgslocalfoods"
+      },
+      {
+        "from": [
+          "MadronaFMKT"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "MadronaFMKT"
+      },
+      {
+        "from": [
+          "whiteoakpasture"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "whiteoakpasture"
+      },
+      {
+        "from": [
+          "FXBGFarmMkt"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "FXBGFarmMkt"
+      },
+      {
+        "from": [
+          "MarketWednesday"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "MarketWednesday"
+      },
+      {
+        "from": [
+          "WorthingtonFM"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "WorthingtonFM"
+      },
+      {
+        "from": [
+          "//twitter.com/BrattWinterMkt"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "//twitter.com/BrattWinterMkt"
+      },
+      {
+        "from": [
+          "petworthmarket"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "petworthmarket"
+      },
+      {
+        "from": [
+          "capecoralfarmer"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "capecoralfarmer"
+      },
+      {
+        "from": [
+          "croftonfarmmkt"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "croftonfarmmkt"
+      },
+      {
+        "from": [
+          "ccfmtweets"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "ccfmtweets"
+      },
+      {
+        "from": [
+          "twitter.com/brocktonmarket"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "twitter.com/brocktonmarket"
+      },
+      {
+        "from": [
+          "FRESHFARMCCDC"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "FRESHFARMCCDC"
+      },
+      {
+        "from": [
+          "Roadrunner Park"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Roadrunner Park"
+      },
+      {
+        "from": [
+          "cofarmartmarket"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "cofarmartmarket"
+      },
+      {
+        "from": [
+          "Twitter.com/heritagefarmersmarket"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Twitter.com/heritagefarmersmarket"
+      },
+      {
+        "from": [
+          "smartmarkets"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "smartmarkets"
+      },
+      {
+        "from": [
+          "FtWaynesFM"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "FtWaynesFM"
+      },
+      {
+        "from": [
+          "EnoRiverFM"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "EnoRiverFM"
+      },
+      {
+        "from": [
+          "ProjectChangeMS"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "ProjectChangeMS"
+      },
+      {
+        "from": [
+          "BuyClarkCounty"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "BuyClarkCounty"
+      },
+      {
+        "from": [
+          "monroestfm"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "monroestfm"
+      },
+      {
+        "from": [
+          "search?q=Fairlington%20Farmers%20Market&src=typd&lang=en"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "search?q=Fairlington%20Farmers%20Market&src=typd&lang=en"
+      },
+      {
+        "from": [
+          "jnsvlfarmmkt"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "jnsvlfarmmkt"
+      },
+      {
+        "from": [
+          "MarketatHague"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "MarketatHague"
+      },
+      {
+        "from": [
+          "playavistaFM"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "playavistaFM"
+      },
+      {
+        "from": [
+          "SpenardFarmers"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "SpenardFarmers"
+      },
+      {
+        "from": [
+          "PCCFarmMrkt"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "PCCFarmMrkt"
+      },
+      {
+        "from": [
+          "Artisans Cove"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Artisans Cove"
+      },
+      {
+        "from": [
+          "islandvieweats"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "islandvieweats"
+      },
+      {
+        "from": [
+          "GGWinterMarkets"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "GGWinterMarkets"
+      },
+      {
+        "from": [
+          "WFMA2"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "WFMA2"
+      },
+      {
+        "from": [
+          "fultonmarketmn"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "fultonmarketmn"
+      },
+      {
+        "from": [
+          "www.twitter.com/eatwellcaswell"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "www.twitter.com/eatwellcaswell"
+      },
+      {
+        "from": [
+          "NewMorningFarm"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "NewMorningFarm"
+      },
+      {
+        "from": [
+          "info@cannon Beach Farmers Market"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "info@cannon Beach Farmers Market"
+      },
+      {
+        "from": [
+          "14UFarmersMkt"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "14UFarmersMkt"
+      },
+      {
+        "from": [
+          "FortvilleMarket"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "FortvilleMarket"
+      },
+      {
+        "from": [
+          "washleyfarms"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "washleyfarms"
+      },
+      {
+        "from": [
+          "carbondalemarket"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "carbondalemarket"
+      },
+      {
+        "from": [
+          "VFMRutland"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "VFMRutland"
+      },
+      {
+        "from": [
+          "AFoodworksMKT"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "AFoodworksMKT"
+      },
+      {
+        "from": [
+          "homegrownal"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "homegrownal"
+      },
+      {
+        "from": [
+          "sloccfm"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "sloccfm"
+      },
+      {
+        "from": [
+          "WilliamsburgFM"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "WilliamsburgFM"
+      },
+      {
+        "from": [
+          "ELFarmersMarket"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "ELFarmersMarket"
+      },
+      {
+        "from": [
+          "01757FarmersMkt"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "01757FarmersMkt"
+      },
+      {
+        "from": [
+          "MetuchenFarmMKT"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "MetuchenFarmMKT"
+      },
+      {
+        "from": [
+          "NoCOFarmersMrkt"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "NoCOFarmersMrkt"
+      },
+      {
+        "from": [
+          "clarkparkmarket"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "clarkparkmarket"
+      },
+      {
+        "from": [
+          "comofarmers"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "comofarmers"
+      },
+      {
+        "from": [
+          "WallingfordFMKT"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "WallingfordFMKT"
+      },
+      {
+        "from": [
+          "WRmarket"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "WRmarket"
+      },
+      {
+        "from": [
+          "www.twitter.com/archdaleparks"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "www.twitter.com/archdaleparks"
+      },
+      {
+        "from": [
+          "HBFarmersMrkt"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "HBFarmersMrkt"
+      },
+      {
+        "from": [
+          "VABeachFarmMrkt"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "VABeachFarmMrkt"
+      },
+      {
+        "from": [
+          "GSOFarmersMkt"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "GSOFarmersMkt"
+      },
+      {
+        "from": [
+          "imancentral"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "imancentral"
+      },
+      {
+        "from": [
+          "portlandfarmers"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "portlandfarmers"
+      },
+      {
+        "from": [
+          "PASADENACFMS"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "PASADENACFMS"
+      },
+      {
+        "from": [
+          "ClaremontNC"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "ClaremontNC"
+      },
+      {
+        "from": [
+          "ChisagoCFarmersMkt"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "ChisagoCFarmersMkt"
+      },
+      {
+        "from": [
+          "lancastervillagemarket"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "lancastervillagemarket"
+      },
+      {
+        "from": [
+          "FarmShopDeKalb"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "FarmShopDeKalb"
+      },
+      {
+        "from": [
+          "smfms"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "smfms"
+      },
+      {
+        "from": [
+          "GRFarmersMrkt"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "GRFarmersMrkt"
+      },
+      {
+        "from": [
+          "twitter.com/MCG_MMKT"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "twitter.com/MCG_MMKT"
+      },
+      {
+        "from": [
+          "CUFarmFresh"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "CUFarmFresh"
+      },
+      {
+        "from": [
+          "nocofoodcluster"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "nocofoodcluster"
+      },
+      {
+        "from": [
+          "curbmarket"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "curbmarket"
+      },
+      {
+        "from": [
+          "nsfm"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "nsfm"
+      },
+      {
+        "from": [
+          "GrowDatNOLA"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "GrowDatNOLA"
+      },
+      {
+        "from": [
+          "gordonsqmarket"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "gordonsqmarket"
+      },
+      {
+        "from": [
+          "SKGreenMarket"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "SKGreenMarket"
+      },
+      {
+        "from": [
+          "LowellMrkt"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "LowellMrkt"
+      },
+      {
+        "from": [
+          "BKSfarmersmkt"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "BKSfarmersmkt"
+      },
+      {
+        "from": [
+          "cottins"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "cottins"
+      },
+      {
+        "from": [
+          "clairemontfm"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "clairemontfm"
+      },
+      {
+        "from": [
+          "NSFMkt"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "NSFMkt"
+      },
+      {
+        "from": [
+          "AgritopiaFarm"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "AgritopiaFarm"
+      },
+      {
+        "from": [
+          "ygfarmersmarket"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "ygfarmersmarket"
+      },
+      {
+        "from": [
+          "12southfrmsmkt"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "12southfrmsmkt"
+      },
+      {
+        "from": [
+          "kingfieldmarket"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "kingfieldmarket"
+      },
+      {
+        "from": [
+          "twitter.com/CHLDC"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "twitter.com/CHLDC"
+      },
+      {
+        "from": [
+          "avlcitymarket"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "avlcitymarket"
+      },
+      {
+        "from": [
+          "Sbxfarmmarket"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Sbxfarmmarket"
+      },
+      {
+        "from": [
+          "herefordfarmmkt"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "herefordfarmmkt"
+      },
+      {
+        "from": [
+          "Redjacketny"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Redjacketny"
+      },
+      {
+        "from": [
+          "salishmarket"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "salishmarket"
+      },
+      {
+        "from": [
+          "rockthemarket?lang=en"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "rockthemarket?lang=en"
+      },
+      {
+        "from": [
+          "rfmeatlocal"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "rfmeatlocal"
+      },
+      {
+        "from": [
+          "AZfarmersmarket"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "AZfarmersmarket"
+      },
+      {
+        "from": [
+          "FarmtoCity"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "FarmtoCity"
+      },
+      {
+        "from": [
+          "FlintFarmMarket"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "FlintFarmMarket"
+      },
+      {
+        "from": [
+          "chfarmersmarket?lang=en"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "chfarmersmarket?lang=en"
+      },
+      {
+        "from": [
+          "portaustin"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "portaustin"
+      },
+      {
+        "from": [
+          "quakertown farmers market"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "quakertown farmers market"
+      },
+      {
+        "from": [
+          "ColoradoFreshMarkets@COfreshmarkets"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "ColoradoFreshMarkets@COfreshmarkets"
+      },
+      {
+        "from": [
+          "RiverCityMarket"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "RiverCityMarket"
+      },
+      {
+        "from": [
+          "LandConnection"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "LandConnection"
+      },
+      {
+        "from": [
+          "YLNIFarmersMarket"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "YLNIFarmersMarket"
+      },
+      {
+        "from": [
+          "lvngstnmrkt"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "lvngstnmrkt"
+      },
+      {
+        "from": [
+          "RFMWilmingtonNC"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "RFMWilmingtonNC"
+      },
+      {
+        "from": [
+          "apmarket"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "apmarket"
+      },
+      {
+        "from": [
+          "fm2columbia"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "fm2columbia"
+      },
+      {
+        "from": [
+          "PopGrove"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "PopGrove"
+      },
+      {
+        "from": [
+          "AustintownFM"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "AustintownFM"
+      },
+      {
+        "from": [
+          "5riversmarket"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "5riversmarket"
+      },
+      {
+        "from": [
+          "GDCduluth"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "GDCduluth"
+      },
+      {
+        "from": [
+          "BhamFarmersMkt"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "BhamFarmersMkt"
+      },
+      {
+        "from": [
+          "uptownmarketaz"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "uptownmarketaz"
+      },
+      {
+        "from": [
+          "twitter.com/nutleyfm"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "twitter.com/nutleyfm"
+      },
+      {
+        "from": [
+          "TempeCommAction"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "TempeCommAction"
+      },
+      {
+        "from": [
+          "Valley_Junction"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Valley_Junction"
+      },
+      {
+        "from": [
+          "no"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "no"
+      },
+      {
+        "from": [
+          "NUFarmersMarket"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "NUFarmersMarket"
+      },
+      {
+        "from": [
+          "cafarmersmkts"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "cafarmersmkts"
+      },
+      {
+        "from": [
+          "area10agency"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "area10agency"
+      },
+      {
+        "from": [
+          "WGFarmersMarket"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "WGFarmersMarket"
+      },
+      {
+        "from": [
+          "HopeFarmMarket"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "HopeFarmMarket"
+      },
+      {
+        "from": [
+          "AltadenaFM"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "AltadenaFM"
+      },
+      {
+        "from": [
+          "Argus Farm Stop"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Argus Farm Stop"
+      },
+      {
+        "from": [
+          "PtreeFarmersMkt"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "PtreeFarmersMkt"
+      },
+      {
+        "from": [
+          "findlaymarket"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "findlaymarket"
+      },
+      {
+        "from": [
+          "TuscRiverMarket"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "TuscRiverMarket"
+      },
+      {
+        "from": [
+          "MNPFarmersMkt"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "MNPFarmersMkt"
+      },
+      {
+        "from": [
+          "no twitter"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "no twitter"
+      },
+      {
+        "from": [
+          "oakleymarket"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "oakleymarket"
+      },
+      {
+        "from": [
+          "WLFarmersMkt"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "WLFarmersMkt"
+      },
+      {
+        "from": [
+          "gilbertmarket"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "gilbertmarket"
+      },
+      {
+        "from": [
+          "OlneyFarmArtMkt"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "OlneyFarmArtMkt"
+      },
+      {
+        "from": [
+          "http://twitter.com/MuldoonFarmers"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "http://twitter.com/MuldoonFarmers"
+      },
+      {
+        "from": [
+          "uptowngwdmarket"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "uptowngwdmarket"
+      },
+      {
+        "from": [
+          "twitter.com/WeyFarmersMkt"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "twitter.com/WeyFarmersMkt"
+      },
+      {
+        "from": [
+          "KingFarmersMkt"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "KingFarmersMkt"
+      },
+      {
+        "from": [
+          "Farmista"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Farmista"
+      },
+      {
+        "from": [
+          "Santee Certified Farmer's Market"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Santee Certified Farmer's Market"
+      },
+      {
+        "from": [
+          "FoodshedNJ"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "FoodshedNJ"
+      },
+      {
+        "from": [
+          "PEARLMARKET"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "PEARLMARKET"
+      },
+      {
+        "from": [
+          "polkcountyfarms"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "polkcountyfarms"
+      },
+      {
+        "from": [
+          "Sherrill_NY"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Sherrill_NY"
+      },
+      {
+        "from": [
+          "lebanoncitymkt"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "lebanoncitymkt"
+      },
+      {
+        "from": [
+          "marblesprings"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "marblesprings"
+      },
+      {
+        "from": [
+          "warren parks and rec"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "warren parks and rec"
+      },
+      {
+        "from": [
+          "montavillamkt"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "montavillamkt"
+      },
+      {
+        "from": [
+          "govansmarket"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "govansmarket"
+      },
+      {
+        "from": [
+          "MChrisLeese"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "MChrisLeese"
+      },
+      {
+        "from": [
+          "twitter.com/DowntoEarthMkts"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "twitter.com/DowntoEarthMkts"
+      },
+      {
+        "from": [
+          "Vance County Regional Farmers Market"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Vance County Regional Farmers Market"
+      },
+      {
+        "from": [
+          "oak ridge farmers market"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "oak ridge farmers market"
+      },
+      {
+        "from": [
+          "nefarmersmarket"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "nefarmersmarket"
+      },
+      {
+        "from": [
+          "The WALL"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "The WALL"
+      },
+      {
+        "from": [
+          "BRfarmersmarket"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "BRfarmersmarket"
+      },
+      {
+        "from": [
+          "https//twitter.com/StPaulMarket"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "https//twitter.com/StPaulMarket"
+      },
+      {
+        "from": [
+          "HobartFarmersMk"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "HobartFarmersMk"
+      },
+      {
+        "from": [
+          "MaureenDatta"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "MaureenDatta"
+      },
+      {
+        "from": [
+          "chattamarket"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "chattamarket"
+      },
+      {
+        "from": [
+          "www.twitter.com/troymarket"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "www.twitter.com/troymarket"
+      },
+      {
+        "from": [
+          "firehousemarket"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "firehousemarket"
+      },
+      {
+        "from": [
+          "#MakeItHalsted, #SouthsideFresh, #FarSouthFresh"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "#MakeItHalsted, #SouthsideFresh, #FarSouthFresh"
+      },
+      {
+        "from": [
+          "umnfarmersmrkt"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "umnfarmersmrkt"
+      },
+      {
+        "from": [
+          "Salemfarmersmkt"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Salemfarmersmkt"
+      },
+      {
+        "from": [
+          "Old Town Newhall FM"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Old Town Newhall FM"
+      },
+      {
+        "from": [
+          "ZionFarmersMarket"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "ZionFarmersMarket"
+      },
+      {
+        "from": [
+          "laurelcofarmers"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "laurelcofarmers"
+      },
+      {
+        "from": [
+          "PSFARMERSMARKET"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "PSFARMERSMARKET"
+      },
+      {
+        "from": [
+          "VAFarmMkt"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "VAFarmMkt"
+      },
+      {
+        "from": [
+          "RAPPky"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "RAPPky"
+      },
+      {
+        "from": [
+          "hfmnow"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "hfmnow"
+      },
+      {
+        "from": [
+          "teenaspridecsa"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "teenaspridecsa"
+      },
+      {
+        "from": [
+          "athertonmillmkt"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "athertonmillmkt"
+      },
+      {
+        "from": [
+          "twitter.com/FrenchMktNOLA"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "twitter.com/FrenchMktNOLA"
+      },
+      {
+        "from": [
+          "rexburgmarket"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "rexburgmarket"
+      },
+      {
+        "from": [
+          "GWCoFarm Bureau"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "GWCoFarm Bureau"
+      },
+      {
+        "from": [
+          "HilliardMarket"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "HilliardMarket"
+      },
+      {
+        "from": [
+          "marketbtown"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "marketbtown"
+      },
+      {
+        "from": [
+          "RiverMktFair"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "RiverMktFair"
+      },
+      {
+        "from": [
+          "mstqfarmersmkt"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "mstqfarmersmkt"
+      },
+      {
+        "from": [
+          "SpotsyFarmMkts"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "SpotsyFarmMkts"
+      },
+      {
+        "from": [
+          "salemfarmmarket"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "salemfarmmarket"
+      },
+      {
+        "from": [
+          "www.twitter.com/DurhamFarmerMkt"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "www.twitter.com/DurhamFarmerMkt"
+      },
+      {
+        "from": [
+          "gvillesatmarket"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "gvillesatmarket"
+      },
+      {
+        "from": [
+          "RHINEBECKMKT"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "RHINEBECKMKT"
+      },
+      {
+        "from": [
+          "oxnfarmersmkt"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "oxnfarmersmkt"
+      },
+      {
+        "from": [
+          "twincitymarket"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "twincitymarket"
+      },
+      {
+        "from": [
+          "windsorprc"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "windsorprc"
+      },
+      {
+        "from": [
+          "WIMarket"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "WIMarket"
+      },
+      {
+        "from": [
+          "CWRUFarm"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "CWRUFarm"
+      },
+      {
+        "from": [
+          "AthensMarket"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "AthensMarket"
+      },
+      {
+        "from": [
+          "CSFMTulsa"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "CSFMTulsa"
+      },
+      {
+        "from": [
+          "MainStHanford"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "MainStHanford"
+      },
+      {
+        "from": [
+          "NorthMarket"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "NorthMarket"
+      },
+      {
+        "from": [
+          "swatfarmersmkt"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "swatfarmersmkt"
+      },
+      {
+        "from": [
+          "FPConservatory"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "FPConservatory"
+      },
+      {
+        "from": [
+          "KirklandWMarket"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "KirklandWMarket"
+      },
+      {
+        "from": [
+          "twitter.com/shapeupsville"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "twitter.com/shapeupsville"
+      },
+      {
+        "from": [
+          "twitter.com/bloomfieldmrkt"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "twitter.com/bloomfieldmrkt"
+      },
+      {
+        "from": [
+          "somefm"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "somefm"
+      },
+      {
+        "from": [
+          "DanvilleFM"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "DanvilleFM"
+      },
+      {
+        "from": [
+          "LakeBluffMarket"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "LakeBluffMarket"
+      },
+      {
+        "from": [
+          "SJCFarmersMkt"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "SJCFarmersMkt"
+      },
+      {
+        "from": [
+          "4seasonsm"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "4seasonsm"
+      },
+      {
+        "from": [
+          "SwampscottFM"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "SwampscottFM"
+      },
+      {
+        "from": [
+          "SWfarmersmarket"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "SWfarmersmarket"
+      },
+      {
+        "from": [
+          "https://www.facebook.com/farmermarkHB/"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "https://www.facebook.com/farmermarkHB/"
+      },
+      {
+        "from": [
+          "EasternMarket"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "EasternMarket"
+      },
+      {
+        "from": [
+          "FRESHFARMRslyn"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "FRESHFARMRslyn"
+      },
+      {
+        "from": [
+          "market_austin"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "market_austin"
+      },
+      {
+        "from": [
+          "BFMKT"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "BFMKT"
+      },
+      {
+        "from": [
+          "twitter.com/ehfarmersmkt"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "twitter.com/ehfarmersmkt"
+      },
+      {
+        "from": [
+          "faithinplace"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "faithinplace"
+      },
+      {
+        "from": [
+          "GPBFarmMarket"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "GPBFarmMarket"
+      },
+      {
+        "from": [
+          "olyfarmersmkt"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "olyfarmersmkt"
+      },
+      {
+        "from": [
+          "OSFMI"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "OSFMI"
+      },
+      {
+        "from": [
+          "pdxsjfm"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "pdxsjfm"
+      },
+      {
+        "from": [
+          "unionsquareFM"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "unionsquareFM"
+      },
+      {
+        "from": [
+          "paloaltofarmers"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "paloaltofarmers"
+      },
+      {
+        "from": [
+          "LilburnFarmMkt"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "LilburnFarmMkt"
+      },
+      {
+        "from": [
+          "scifarmersmktri"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "scifarmersmktri"
+      },
+      {
+        "from": [
+          "amquistation"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "amquistation"
+      },
+      {
+        "from": [
+          "CrossroadsDowntown"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "CrossroadsDowntown"
+      },
+      {
+        "from": [
+          "DresdenFarmMkt"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "DresdenFarmMkt"
+      },
+      {
+        "from": [
+          "solcfm"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "solcfm"
+      },
+      {
+        "from": [
+          "SaugertiesFarmMarkt ?@SaugertiesFarmM"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "SaugertiesFarmMarkt ?@SaugertiesFarmM"
+      },
+      {
+        "from": [
+          "LoudounFarmMkts"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "LoudounFarmMkts"
+      },
+      {
+        "from": [
+          "plattsburghfarmersmarket"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "plattsburghfarmersmarket"
+      },
+      {
+        "from": [
+          "orangehomegrown"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "orangehomegrown"
+      },
+      {
+        "from": [
+          "bastrop1832"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "bastrop1832"
+      },
+      {
+        "from": [
+          "pasadenacfm"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "pasadenacfm"
+      },
+      {
+        "from": [
+          "cuesa"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "cuesa"
+      },
+      {
+        "from": [
+          "RECFarmMarket"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "RECFarmMarket"
+      },
+      {
+        "from": [
+          "www.twitter.com/bldrfarmersmkt"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "www.twitter.com/bldrfarmersmkt"
+      },
+      {
+        "from": [
+          "wsufarmersmkt"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "wsufarmersmkt"
+      },
+      {
+        "from": [
+          "plantchicago"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "plantchicago"
+      },
+      {
+        "from": [
+          "EglestonFarmMkt"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "EglestonFarmMkt"
+      },
+      {
+        "from": [
+          "riversidecfm"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "riversidecfm"
+      },
+      {
+        "from": [
+          "PPBFarmMarket"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "PPBFarmMarket"
+      },
+      {
+        "from": [
+          "RichfieldFarmkt"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "RichfieldFarmkt"
+      },
+      {
+        "from": [
+          "GvilleFarMarket"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "GvilleFarMarket"
+      },
+      {
+        "from": [
+          "BelmontFarmersMkt"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "BelmontFarmersMkt"
+      },
+      {
+        "from": [
+          "UofLGSFM"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "UofLGSFM"
+      },
+      {
+        "from": [
+          "lloydmkt"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "lloydmkt"
+      },
+      {
+        "from": [
+          "CommunityFarmer/"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "CommunityFarmer/"
+      },
+      {
+        "from": [
+          "VictoriaDTFM"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "VictoriaDTFM"
+      },
+      {
+        "from": [
+          "RentonFarmersM"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "RentonFarmersM"
+      },
+      {
+        "from": [
+          "umfarmersmarket"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "umfarmersmarket"
+      },
+      {
+        "from": [
+          "EatFreshAustin"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "EatFreshAustin"
+      },
+      {
+        "from": [
+          "SiouxCityFarmersMarket"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "SiouxCityFarmersMarket"
+      },
+      {
+        "from": [
+          "BhamFarmMkt"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "BhamFarmMkt"
+      },
+      {
+        "from": [
+          "MontFarmersMkt"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "MontFarmersMkt"
+      },
+      {
+        "from": [
+          "ashlandvafm"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "ashlandvafm"
+      },
+      {
+        "from": [
+          "McAFarmersMKT"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "McAFarmersMKT"
+      },
+      {
+        "from": [
+          "FRESHFARMMVT"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "FRESHFARMMVT"
+      },
+      {
+        "from": [
+          "greenwoodavefm"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "greenwoodavefm"
+      },
+      {
+        "from": [
+          "Stanley Jamburger"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Stanley Jamburger"
+      },
+      {
+        "from": [
+          "haymakermarket"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "haymakermarket"
+      },
+      {
+        "from": [
+          "La Mujer Obrera"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "La Mujer Obrera"
+      },
+      {
+        "from": [
+          "SaratogaMarket"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "SaratogaMarket"
+      },
+      {
+        "from": [
+          "pepperplacemkt"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "pepperplacemkt"
+      },
+      {
+        "from": [
+          "ClarkstonMarket"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "ClarkstonMarket"
+      },
+      {
+        "from": [
+          "http://twitter.com/ctfarmersmarket"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "http://twitter.com/ctfarmersmarket"
+      },
+      {
+        "from": [
+          "FarmersMarketUM"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "FarmersMarketUM"
+      },
+      {
+        "from": [
+          "market03824"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "market03824"
+      },
+      {
+        "from": [
+          "NYCGreenmarkets"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "NYCGreenmarkets"
+      },
+      {
+        "from": [
+          "market03820"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "market03820"
+      },
+      {
+        "from": [
+          "lvillemarket"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "lvillemarket"
+      },
+      {
+        "from": [
+          "FRESHFARMBllstn"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "FRESHFARMBllstn"
+      },
+      {
+        "from": [
+          "CannonParkCM"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "CannonParkCM"
+      },
+      {
+        "from": [
+          "jolfarm"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "jolfarm"
+      },
+      {
+        "from": [
+          "BroadwayFarmMkt"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "BroadwayFarmMkt"
+      },
+      {
+        "from": [
+          "GrandFunGP"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "GrandFunGP"
+      },
+      {
+        "from": [
+          "hubbsfarm"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "hubbsfarm"
+      },
+      {
+        "from": [
+          "DowntoEarthMkts"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "DowntoEarthMkts"
+      },
+      {
+        "from": [
+          "https://www.wpfarmersmarket.com/wpfm.html#.WUmKwAGCtyg.twitter"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "https://www.wpfarmersmarket.com/wpfm.html#.WUmKwAGCtyg.twitter"
+      },
+      {
+        "from": [
+          "farewaymarket"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "farewaymarket"
+      },
+      {
+        "from": [
+          "MelroseSFFM"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "MelroseSFFM"
+      },
+      {
+        "from": [
+          "DentonMarket"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "DentonMarket"
+      },
+      {
+        "from": [
+          "kemmerermainst"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "kemmerermainst"
+      },
+      {
+        "from": [
+          "DukeFarmsFdn"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "DukeFarmsFdn"
+      },
+      {
+        "from": [
+          "NolensvilleFM"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "NolensvilleFM"
+      },
+      {
+        "from": [
+          "WesMarFarms"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "WesMarFarms"
+      },
+      {
+        "from": [
+          "SantaRosaFrmMkt"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "SantaRosaFrmMkt"
+      },
+      {
+        "from": [
+          "market03833"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "market03833"
+      },
+      {
+        "from": [
+          "twitter.com/StorrsFarmers"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "twitter.com/StorrsFarmers"
+      },
+      {
+        "from": [
+          "ivanhoefarm2mkt"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "ivanhoefarm2mkt"
+      },
+      {
+        "from": [
+          "CurbsideMarket?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "CurbsideMarket?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"
+      },
+      {
+        "from": [
+          "westcarrollton"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "westcarrollton"
+      },
+      {
+        "from": [
+          "Catawba_Farms"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Catawba_Farms"
+      },
+      {
+        "from": [
+          "GBFarmersMarket"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "GBFarmersMarket"
+      },
+      {
+        "from": [
+          "FoodShuttle"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "FoodShuttle"
+      },
+      {
+        "from": [
+          "MAFarmMarkets"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "MAFarmMarkets"
+      },
+      {
+        "from": [
+          "pointreyesfarmersmarket"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "pointreyesfarmersmarket"
+      },
+      {
+        "from": [
+          "DB Farmers' Market"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "DB Farmers' Market"
+      },
+      {
+        "from": [
+          "statehousemkt/"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "statehousemkt/"
+      },
+      {
+        "from": [
+          "DelrayGreenMrkt"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "DelrayGreenMrkt"
+      },
+      {
+        "from": [
+          "MoabFarmersMkt"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "MoabFarmersMkt"
+      },
+      {
+        "from": [
+          "rustonfarmmkt"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "rustonfarmmkt"
+      },
+      {
+        "from": [
+          "jtownsj"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "jtownsj"
+      },
+      {
+        "from": [
+          "charlestonfarms"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "charlestonfarms"
+      },
+      {
+        "from": [
+          "EmersonGarfield"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "EmersonGarfield"
+      },
+      {
+        "from": [
+          "copleyfm"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "copleyfm"
+      },
+      {
+        "from": [
+          "CarefreeMarket"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "CarefreeMarket"
+      },
+      {
+        "from": [
+          "farmmarketeers"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "farmmarketeers"
+      },
+      {
+        "from": [
+          "MuthFarmMarket"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "MuthFarmMarket"
+      },
+      {
+        "from": [
+          "greenloyola"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "greenloyola"
+      },
+      {
+        "from": [
+          "http://twitter.com/letsgrowakron"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "http://twitter.com/letsgrowakron"
+      },
+      {
+        "from": [
+          "MidtownFarmMkt"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "MidtownFarmMkt"
+      },
+      {
+        "from": [
+          "www.twitter.com/davidsonfmrsmkt"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "www.twitter.com/davidsonfmrsmkt"
+      },
+      {
+        "from": [
+          "marionvirginia"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "marionvirginia"
+      },
+      {
+        "from": [
+          "STLCherokeeMkt"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "STLCherokeeMkt"
+      },
+      {
+        "from": [
+          "market03801"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "market03801"
+      },
+      {
+        "from": [
+          "jcheightsmarket"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "jcheightsmarket"
+      },
+      {
+        "from": [
+          "mansfieldtxfm"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "mansfieldtxfm"
+      },
+      {
+        "from": [
+          "search?f=tweets&q=goodyearfm&src=typd"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "search?f=tweets&q=goodyearfm&src=typd"
+      },
+      {
+        "from": [
+          "BexleyMarket"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "BexleyMarket"
+      },
+      {
+        "from": [
+          "SchdyGreenmkt"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "SchdyGreenmkt"
+      },
+      {
+        "from": [
+          "DruidHillMkt"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "DruidHillMkt"
+      },
+      {
+        "from": [
+          "twitter.com/hudsinfo"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "twitter.com/hudsinfo"
+      },
+      {
+        "from": [
+          "MpleShdeFarmMkt"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "MpleShdeFarmMkt"
+      },
+      {
+        "from": [
+          "WestoverFarmMkt"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "WestoverFarmMkt"
+      },
+      {
+        "from": [
+          "FarmMarketMV"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "FarmMarketMV"
+      },
+      {
+        "from": [
+          "PVFM1"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "PVFM1"
+      },
+      {
+        "from": [
+          "roswellfam"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "roswellfam"
+      },
+      {
+        "from": [
+          "yes"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "yes"
+      },
+      {
+        "from": [
+          "RebeccaCAFM"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "RebeccaCAFM"
+      },
+      {
+        "from": [
+          "SDFarmersMarket"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "SDFarmersMarket"
+      },
+      {
+        "from": [
+          "OrganicGrownDr"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "OrganicGrownDr"
+      },
+      {
+        "from": [
+          "brickfresh"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "brickfresh"
+      },
+      {
+        "from": [
+          "SeymourFarmMkt"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "SeymourFarmMkt"
+      },
+      {
+        "from": [
+          "coppellfm"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "coppellfm"
+      },
+      {
+        "from": [
+          "farmlovers"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "farmlovers"
+      },
+      {
+        "from": [
+          "ecbfm"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "ecbfm"
+      },
+      {
+        "from": [
+          "farmersmarketTH"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "farmersmarketTH"
+      },
+      {
+        "from": [
+          "sankofanola"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "sankofanola"
+      },
+      {
+        "from": [
+          "http://twitter.com/ontheranchnlv"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "http://twitter.com/ontheranchnlv"
+      },
+      {
+        "from": [
+          "murraymainst"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "murraymainst"
+      },
+      {
+        "from": [
+          "TuesdayMarket"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "TuesdayMarket"
+      },
+      {
+        "from": [
+          "NorthBuffaloMkt"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "NorthBuffaloMkt"
+      },
+      {
+        "from": [
+          "rbfarmersmarket"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "rbfarmersmarket"
+      },
+      {
+        "from": [
+          "CoHeightsMarket"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "CoHeightsMarket"
+      },
+      {
+        "from": [
+          "cvcountryside"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "cvcountryside"
+      },
+      {
+        "from": [
+          "MBFarmersMarket"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "MBFarmersMarket"
+      },
+      {
+        "from": [
+          "ccdowntownfm"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "ccdowntownfm"
+      },
+      {
+        "from": [
+          "AuburnMarket"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "AuburnMarket"
+      },
+      {
+        "from": [
+          "GervasiVineyard"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "GervasiVineyard"
+      },
+      {
+        "from": [
+          "larimercountyfm"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "larimercountyfm"
+      },
+      {
+        "from": [
+          "RalDTFarmersMkt"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "RalDTFarmersMkt"
+      },
+      {
+        "from": [
+          "MJFarmersMarket"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "MJFarmersMarket"
+      },
+      {
+        "from": [
+          "cummingharvest"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "cummingharvest"
+      },
+      {
+        "from": [
+          "DowntownNashua"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "DowntownNashua"
+      },
+      {
+        "from": [
+          "twitter.com/obfm"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "twitter.com/obfm"
+      },
+      {
+        "from": [
+          "fmlincolnpark"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "fmlincolnpark"
+      },
+      {
+        "from": [
+          "NPFMarket"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "NPFMarket"
+      },
+      {
+        "from": [
+          "#!/GreendaleRec"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "#!/GreendaleRec"
+      },
+      {
+        "from": [
+          "crispgrocery"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "crispgrocery"
+      },
+      {
+        "from": [
+          "hfmlocalgrown"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "hfmlocalgrown"
+      },
+      {
+        "from": [
+          "marketonmainky"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "marketonmainky"
+      },
+      {
+        "from": [
+          "CCCFarmersMrkts"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "CCCFarmersMrkts"
+      },
+      {
+        "from": [
+          "firstcoasttech"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "firstcoasttech"
+      },
+      {
+        "from": [
+          "PittsfieldTwp"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "PittsfieldTwp"
+      },
+      {
+        "from": [
+          "fwfarmersmarket"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "fwfarmersmarket"
+      },
+      {
+        "from": [
+          "BartSt_FarmMrkt"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "BartSt_FarmMrkt"
+      },
+      {
+        "from": [
+          "faycofarmersmkt"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "faycofarmersmkt"
+      },
+      {
+        "from": [
+          "SantaCruzRiver"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "SantaCruzRiver"
+      },
+      {
+        "from": [
+          "greenevillefarm"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "greenevillefarm"
+      },
+      {
+        "from": [
+          "waverlycary"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "waverlycary"
+      },
+      {
+        "from": [
+          "macombcd1"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "macombcd1"
+      },
+      {
+        "from": [
+          "wyomfarmmkt"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "wyomfarmmkt"
+      },
+      {
+        "from": [
+          "AlohaFarmMarket"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "AlohaFarmMarket"
+      },
+      {
+        "from": [
+          "laredomainstreet"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "laredomainstreet"
+      },
+      {
+        "from": [
+          "wsfarmersmarket"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "wsfarmersmarket"
+      },
+      {
+        "from": [
+          "NsideFarmersMkt"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "NsideFarmersMkt"
+      },
+      {
+        "from": [
+          "lanceastside"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "lanceastside"
+      },
+      {
+        "from": [
+          "ocfarmersmkt"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "ocfarmersmkt"
+      },
+      {
+        "from": [
+          "FarmMarket125th"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "FarmMarket125th"
+      },
+      {
+        "from": [
+          "14KenFM"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "14KenFM"
+      },
+      {
+        "from": [
+          "CaryNCfarmermkt"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "CaryNCfarmermkt"
+      },
+      {
+        "from": [
+          "Agricenter_Intl"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Agricenter_Intl"
+      },
+      {
+        "from": [
+          "GrizzCommFund"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "GrizzCommFund"
+      },
+      {
+        "from": [
+          "LocalRootsFM"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "LocalRootsFM"
+      },
+      {
+        "from": [
+          "kpfresno"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "kpfresno"
+      },
+      {
+        "from": [
+          "FFMKzoo"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "FFMKzoo"
+      },
+      {
+        "from": [
+          "rcfarmersmarket"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "rcfarmersmarket"
+      },
+      {
+        "from": [
+          "bfarmmarket"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "bfarmmarket"
+      },
+      {
+        "from": [
+          "FMOzarks"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "FMOzarks"
+      },
+      {
+        "from": [
+          "dearbornfarmersmkt"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "dearbornfarmersmkt"
+      },
+      {
+        "from": [
+          "HERBanFarmMarkt"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "HERBanFarmMarkt"
+      },
+      {
+        "from": [
+          "HS_FarmersMkt"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "HS_FarmersMkt"
+      },
+      {
+        "from": [
+          "AtMDFM"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "AtMDFM"
+      },
+      {
+        "from": [
+          "TempleCityFarmersMarket"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "TempleCityFarmersMarket"
+      },
+      {
+        "from": [
+          "MarshfieldFM"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "MarshfieldFM"
+      },
+      {
+        "from": [
+          "SheltonMarket"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "SheltonMarket"
+      },
+      {
+        "from": [
+          "www.twitter.com/lansdalefm"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "www.twitter.com/lansdalefm"
+      },
+      {
+        "from": [
+          "QAFarmersMkt"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "QAFarmersMkt"
+      },
+      {
+        "from": [
+          "OSUOKCfrmrmrkt"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "OSUOKCfrmrmrkt"
+      },
+      {
+        "from": [
+          "stoughtonfarmer"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "stoughtonfarmer"
+      },
+      {
+        "from": [
+          "fvfarmersmarket"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "fvfarmersmarket"
+      },
+      {
+        "from": [
+          "cheverlymarket"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "cheverlymarket"
+      },
+      {
+        "from": [
+          "rvag_inc"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "rvag_inc"
+      },
+      {
+        "from": [
+          "GreenCityMarket"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "GreenCityMarket"
+      },
+      {
+        "from": [
+          "BOISE FARMERS MARKET"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "BOISE FARMERS MARKET"
+      },
+      {
+        "from": [
+          "cfm1975"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "cfm1975"
+      },
+      {
+        "from": [
+          "ithacamarket"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "ithacamarket"
+      },
+      {
+        "from": [
+          "FarmMarketBurNC"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "FarmMarketBurNC"
+      },
+      {
+        "from": [
+          "BMIatWork"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "BMIatWork"
+      },
+      {
+        "from": [
+          "farmersmarketpv"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "farmersmarketpv"
+      },
+      {
+        "from": [
+          "dedhamfarmers"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "dedhamfarmers"
+      },
+      {
+        "from": [
+          "saverrdepot"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "saverrdepot"
+      },
+      {
+        "from": [
+          "carrboromarket"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "carrboromarket"
+      },
+      {
+        "from": [
+          "DwntnChandler"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "DwntnChandler"
+      },
+      {
+        "from": [
+          "BethFWM"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "BethFWM"
+      },
+      {
+        "from": [
+          "twitter.com/BethFarmMkt"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "twitter.com/BethFarmMkt"
+      },
+      {
+        "from": [
+          "west_main_st"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "west_main_st"
+      },
+      {
+        "from": [
+          "FRESHFARMWhtHse"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "FRESHFARMWhtHse"
+      },
+      {
+        "from": [
+          "twitter.com/downtownanaheim"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "twitter.com/downtownanaheim"
+      },
+      {
+        "from": [
+          "chelmsfordagway"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "chelmsfordagway"
+      },
+      {
+        "from": [
+          "KellerFarmersM"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "KellerFarmersM"
+      },
+      {
+        "from": [
+          "LHFoodSystems"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "LHFoodSystems"
+      },
+      {
+        "from": [
+          "NWFLfarmersmkt"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "NWFLfarmersmkt"
+      },
+      {
+        "from": [
+          "SCFarmersMkts"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "SCFarmersMkts"
+      },
+      {
+        "from": [
+          "Old Town Farmers Mkt @OTFM"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Old Town Farmers Mkt @OTFM"
+      },
+      {
+        "from": [
+          "CityofRM1"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "CityofRM1"
+      },
+      {
+        "from": [
+          "BenWallach1"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "BenWallach1"
+      },
+      {
+        "from": [
+          "BCFMarkets"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "BCFMarkets"
+      },
+      {
+        "from": [
+          "CascoFMKT"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "CascoFMKT"
+      },
+      {
+        "from": [
+          "www.twitter.com/PacCoastFarmers"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "www.twitter.com/PacCoastFarmers"
+      },
+      {
+        "from": [
+          "CoreyMarket"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "CoreyMarket"
+      },
+      {
+        "from": [
+          "GreenptFmrsMkt"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "GreenptFmrsMkt"
+      },
+      {
+        "from": [
+          "quarryfm"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "quarryfm"
+      },
+      {
+        "from": [
+          "prescottfarmers"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "prescottfarmers"
+      },
+      {
+        "from": [
+          "DublinMarket"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "DublinMarket"
+      },
+      {
+        "from": [
+          "Tewksbury Farmer's Market"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Tewksbury Farmer's Market"
+      },
+      {
+        "from": [
+          "hopemarketatx"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "hopemarketatx"
+      },
+      {
+        "from": [
+          "WalpoleFarmers"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "WalpoleFarmers"
+      },
+      {
+        "from": [
+          "wwfm"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "wwfm"
+      },
+      {
+        "from": [
+          "dbgfarmers"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "dbgfarmers"
+      },
+      {
+        "from": [
+          "http://twitter.com/NSDCFM"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "http://twitter.com/NSDCFM"
+      },
+      {
+        "from": [
+          "twitter.com/greenbeltfm"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "twitter.com/greenbeltfm"
+      },
+      {
+        "from": [
+          "FeastofArtisans"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "FeastofArtisans"
+      },
+      {
+        "from": [
+          "urbanoasisproj"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "urbanoasisproj"
+      },
+      {
+        "from": [
+          "freshonQ"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "freshonQ"
+      },
+      {
+        "from": [
+          "battensmarket"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "battensmarket"
+      },
+      {
+        "from": [
+          "AtwaterFM"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "AtwaterFM"
+      },
+      {
+        "from": [
+          "Follow us on Twitter"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Follow us on Twitter"
+      },
+      {
+        "from": [
+          "MainStFarmers"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "MainStFarmers"
+      },
+      {
+        "from": [
+          "Canaldistrict"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Canaldistrict"
+      },
+      {
+        "from": [
+          "MenoFarmMarket"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "MenoFarmMarket"
+      },
+      {
+        "from": [
+          "rochfarmmkt"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "rochfarmmkt"
+      },
+      {
+        "from": [
+          "emoryfarmersmkt"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "emoryfarmersmkt"
+      },
+      {
+        "from": [
+          "http://twitter.com/GreenlandFM"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "http://twitter.com/GreenlandFM"
+      },
+      {
+        "from": [
+          "TFMLakeline"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "TFMLakeline"
+      },
+      {
+        "from": [
+          "westfieldfmsmk"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "westfieldfmsmk"
+      },
+      {
+        "from": [
+          "gatewaycdc"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "gatewaycdc"
+      },
+      {
+        "from": [
+          "BeaufortFarmers"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "BeaufortFarmers"
+      },
+      {
+        "from": [
+          "twitter.com/rvag_inc"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "twitter.com/rvag_inc"
+      },
+      {
+        "from": [
+          "millstmarket"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "millstmarket"
+      },
+      {
+        "from": [
+          "AVFarmersMarket"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "AVFarmersMarket"
+      },
+      {
+        "from": [
+          "everettmarket"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "everettmarket"
+      },
+      {
+        "from": [
+          "UCNCLocalFoods"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "UCNCLocalFoods"
+      },
+      {
+        "from": [
+          "61market"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "61market"
+      },
+      {
+        "from": [
+          "ARLFoodworks"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "ARLFoodworks"
+      },
+      {
+        "from": [
+          "glenwoodsunday"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "glenwoodsunday"
+      },
+      {
+        "from": [
+          "www.twitter.com/mvfm_2016"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "www.twitter.com/mvfm_2016"
+      },
+      {
+        "from": [
+          "soulard_market"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "soulard_market"
+      },
+      {
+        "from": [
+          "rpfm"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "rpfm"
+      },
+      {
+        "from": [
+          "TacomasMarkets"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "TacomasMarkets"
+      },
+      {
+        "from": [
+          "wasatchfrontfm"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "wasatchfrontfm"
+      },
+      {
+        "from": [
+          "Culinary_Kids"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Culinary_Kids"
+      },
+      {
+        "from": [
+          "lanccentmrkt"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "lanccentmrkt"
+      },
+      {
+        "from": [
+          "WalFarmMkt"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "WalFarmMkt"
+      },
+      {
+        "from": [
+          "FarmersMarketNC/"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "FarmersMarketNC/"
+      },
+      {
+        "from": [
+          "farmmarket.com"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "farmmarket.com"
+      },
+      {
+        "from": [
+          "a2market"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "a2market"
+      },
+      {
+        "from": [
+          "twitter.com/gatmarket"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "twitter.com/gatmarket"
+      },
+      {
+        "from": [
+          "monrofarmmarket"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "monrofarmmarket"
+      },
+      {
+        "from": [
+          "RECWorcester"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "RECWorcester"
+      },
+      {
+        "from": [
+          "buyfresh"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "buyfresh"
+      },
+      {
+        "from": [
+          "LPFarmersMarket"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "LPFarmersMarket"
+      },
+      {
+        "from": [
+          "MIFarmersMarket"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "MIFarmersMarket"
+      },
+      {
+        "from": [
+          "twitter.com/sowa_Boston"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "twitter.com/sowa_Boston"
+      },
+      {
+        "from": [
+          "WaldoFleaMarket"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "WaldoFleaMarket"
+      },
+      {
+        "from": [
+          "Lakeshore Farmers Market"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Lakeshore Farmers Market"
+      },
+      {
+        "from": [
+          "twitter.com/kitterymarket"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "twitter.com/kitterymarket"
+      },
+      {
+        "from": [
+          "arnoldfarmmkt"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "arnoldfarmmkt"
+      },
+      {
+        "from": [
+          "milkladymarkets"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "milkladymarkets"
+      },
+      {
+        "from": [
+          "Anthemfm1"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Anthemfm1"
+      },
+      {
+        "from": [
+          "PXFMarket"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "PXFMarket"
+      },
+      {
+        "from": [
+          "FRESHFARMCrystl"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "FRESHFARMCrystl"
+      },
+      {
+        "from": [
+          "eatfresh01581"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "eatfresh01581"
+      },
+      {
+        "from": [
+          "rvgrowersmarket"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "rvgrowersmarket"
+      },
+      {
+        "from": [
+          "twitter.com/memfarmersmkt"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "twitter.com/memfarmersmkt"
+      },
+      {
+        "from": [
+          "peoplescooppdx"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "peoplescooppdx"
+      },
+      {
+        "from": [
+          "CdaleFridayFair"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "CdaleFridayFair"
+      },
+      {
+        "from": [
+          "Ebenezer Road Farmers Market"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Ebenezer Road Farmers Market"
+      },
+      {
+        "from": [
+          "cityofeagan"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "cityofeagan"
+      },
+      {
+        "from": [
+          "WCM_Market"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "WCM_Market"
+      },
+      {
+        "from": [
+          "kristinmccabe25"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "kristinmccabe25"
+      },
+      {
+        "from": [
+          "www.twitter.com/CvilleParksRec"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "www.twitter.com/CvilleParksRec"
+      },
+      {
+        "from": [
+          "FRESHFARMFgyBtm"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "FRESHFARMFgyBtm"
+      },
+      {
+        "from": [
+          "SPSatAMMkt"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "SPSatAMMkt"
+      },
+      {
+        "from": [
+          "https://www.instagram.com/floydfarmersmarket/"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "https://www.instagram.com/floydfarmersmarket/"
+      },
+      {
+        "from": [
+          "PlainwellMarket"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "PlainwellMarket"
+      },
+      {
+        "from": [
+          "greengrocerdc"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "greengrocerdc"
+      },
+      {
+        "from": [
+          "CollinsvilleFM"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "CollinsvilleFM"
+      },
+      {
+        "from": [
+          "BloomingdaleFM"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "BloomingdaleFM"
+      },
+      {
+        "from": [
+          "GardenShackFarm"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "GardenShackFarm"
+      },
+      {
+        "from": [
+          "SalemVaMarket"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "SalemVaMarket"
+      },
+      {
+        "from": [
+          "cycfarmersmkt"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "cycfarmersmkt"
+      },
+      {
+        "from": [
+          "pbtuesmarket"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "pbtuesmarket"
+      }
+    ],
+    "description": "Mass edit cells in column TwitterHandle"
+  }
+]
