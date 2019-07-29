@@ -1,0 +1,31 @@
+#@begin FarmersMarketDataCleaning 
+#@in dirtyCsv @file data\/farmersmarkets.csv
+#@out clean_data.csv @file data\/clean_data.csv
+
+#@begin openRefine
+#@in dirtyCsv
+#@out cleanerCSV @file data\/ProjectOpenRefine.csv
+
+#@begin valuetypecasting
+#@in dirtyCsv
+#@out typecorrected @desc the columns now have corrected values
+#@end valuetypecasting
+
+#@begin naming
+#@in typecorrected 
+#@out cleanNames @desc the coulmns now have standardized titlecase names
+#@end naming
+
+#@begin twitterHandle
+#@end twitterHandle
+
+#@end openRefine
+
+#@begin Pandas
+#@in cleanerCSV
+#@in countyData @file data\/uscitiesv1.5.csv
+#@out clean_data.csv
+#@end Pandas
+#@end FarmersMarketDataCleaning 
+ 
+ 
